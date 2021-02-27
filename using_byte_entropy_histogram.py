@@ -70,7 +70,7 @@ class ByteEntropyHistogram(FeatureType):
 
             # from the blocks, compute histogram
             for block in blocks:
-                Hbin, c = self._entropy_bin_counts(block)
+                Hbin, nc = self._entropy_bin_counts(block)
                 output[Hbin, :] += nc
 
         return output.flatten().tolist()
